@@ -1,0 +1,15 @@
+ <style>
+    body {background-color: powderblue;}
+    li   {color: blue;}
+    p    {color: red;}
+    
+</style>
+<form action="/interviewers/<%=@interviewer.id%>" method="post">
+<input type="hidden" name="_method" value="patch"/>
+
+<label> Interviewer name:</label>
+<input type="text" name="name" value="<%= @interviewer.name%>"/>
+
+<input type="submit"/>
+
+</form>

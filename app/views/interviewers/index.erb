@@ -1,0 +1,22 @@
+ <style>
+    body {background-color: powderblue;}
+    li   {color: blue;text-align: center;font-size: 16px;}
+    p    {color: red;}
+    button {padding: 15px 150px;text-align: center;font-size: 16px;}
+    ul {color: blue;text-align: center;font-size: 16px;list-style-type: none;}
+    
+</style>
+<ul> Interviewers: 
+<br/>
+<br/>
+<br/>
+<% @interviewers.each do |interviewer| %>
+    <a href="/interviewers/<%= interviewer.id%>">
+        <li> <%= interviewer.name %> </li>
+    </a>
+<% end %>
+</ul>
+
+<button>
+<a href="/interviewers/new">New interviewer </a>
+</button>
